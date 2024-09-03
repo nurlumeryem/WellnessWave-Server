@@ -1,9 +1,12 @@
-class Song{
-    constructor({id, title, author, songLink}){
+
+
+class Song {
+    constructor({ id, title, artist, image, songLink }) {
         this.id = id;
         this.title = title;
-        this.author = author;
-        this.songLink =songLink;
+        this.artist = artist;
+        this.image = image;
+        this.songLink = songLink;
     }
 }
 

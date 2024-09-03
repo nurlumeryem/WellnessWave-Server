@@ -1,4 +1,5 @@
-const UseCaseInterface = require("../interfaces/UseCasInterface");
+const UseCaseInterface = require("../interfaces/UseCaseInterface");
+const Meditation = require("../../domain/entities/Meditation");
 
 class GetAdviceByMood extends UseCaseInterface {
     constructor(quotesRepository) {

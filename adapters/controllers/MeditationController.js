@@ -1,5 +1,6 @@
 const GetAdviceByMood = require("../../application/use-cases/GetAdviceByMood");
 const GeminiApi = require("../../infrastructure/gemini/geminiService");
+const GetDailyQuotes = require("../../application/use-cases/GetDailyQuotes");
 
 class MeditationController {
     static async dailyQuote(req, res) {
@@ -18,8 +19,8 @@ class MeditationController {
             const { mood } = req.params;
             const quotesRepository = new GeminiApi();
             const getAdviceByMood = new GetAdviceByMood(quotesRepository);
-            const quotes = await getAdviceByMood.execute(mood);
-            res.json(quotes);
+            const quotes = await getAdviceByMood.execute(); // mood parametresini geçiyoruz
+            res.json(quotes); // mood ve advice içeren yanıtı doğrudan döndürüyoruz
         } catch (error) {
             res.status(500).json({ error: error.message });
         }

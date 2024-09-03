@@ -1,10 +1,10 @@
 
 class QuotesRepository {
-    async GetDailyQuotes(){
+    async getDailyQuotes() {
         throw new Error('Method not implemented');
     }
 
-    async getAdviceByMood(mood){
+    async getAdviceByMood(mood) {
         throw new Error('Method not implemented');
     }
 }
